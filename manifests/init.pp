@@ -7,6 +7,8 @@
 class dss_chocolatey (
   $chocomgmt = undef,
 ) {
+  $chocosrc = lookup('internal_choco_repo'),
+
   # install and configure chocolatey if chocomgmt is true
   if $chocomgmt {
     include chocolatey
@@ -14,7 +16,7 @@ class dss_chocolatey (
     # Add choco source hosted internally on nexus
     chocolateysource { 'internal_chocolatey':
       ensure   => present,
-      location => hiera('internal_choco_repo'),
+      location => $chocosrc,
       priority => 1,
     }
 
