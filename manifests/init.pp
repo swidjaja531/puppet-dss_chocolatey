@@ -11,13 +11,7 @@ class dss_chocolatey (
   if $chocomgmt {
     $chocosrc = lookup('internal_choco_repo')
 
-    #include chocolatey
-
-    class { 'chocolatey':
-      chocolatey_download_url       => $chocosrc,
-      use_7zip                      => false,
-      choco_install_timeout_seconds => 2700,
-    }
+    include chocolatey
 
     # Add choco source hosted internally on nexus
     chocolateysource { 'internal_chocolatey':
