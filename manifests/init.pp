@@ -7,7 +7,7 @@
 class dss_chocolatey (
   $chocomgmt = undef,
 ) {
-  $chocosrc = lookup('internal_choco_repo'),
+  $chocosrc = lookup('internal_choco_repo')
 
   # install and configure chocolatey if chocomgmt is true
   if $chocomgmt {
