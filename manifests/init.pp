@@ -14,7 +14,7 @@ class dss_chocolatey (
     # Add choco source hosted internally on nexus
     chocolateysource { 'internal_chocolatey':
       ensure   => present,
-      location => $choco_src,
+      location => hiera('internal_choco_repo'),
       priority => 1,
     }
 
