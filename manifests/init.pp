@@ -35,8 +35,8 @@ class dss_chocolatey (
       'chocolatey.extension',
       'chocolatey-core.extension',
     ]:
-      #ensure          => present,
-      ensure          => '0.10.11',
+      ensure          => latest,
+      source          => 'internal_chocolatey',
       install_options => ['-pre'],
       provider        => chocolatey,
       require         => [
