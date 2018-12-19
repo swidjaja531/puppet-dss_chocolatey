@@ -1,0 +1,31 @@
+{
+  "name": "dss-dss_chocolatey",
+  "version": "0.1.0",
+  "author": "twidj7169",
+  "summary": "",
+  "license": "NPOSL-3.0",
+  "source": "",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2008 R2",
+        "2012",
+        "2012 R2",
+        "2016"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "pdk-version": "1.5.0",
+  "template-url": "/home/shared/pdk-templates",
+  "template-ref": "heads/master-0-gc8d9022"
+}
