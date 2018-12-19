@@ -11,7 +11,7 @@ class dss_chocolatey (
   if $chocomgmt {
     $chocosrc = lookup('internal_choco_repo')
 
-    include chocolatey
+    #include chocolatey
 
     class { 'chocolatey':
       chocolatey_download_url       => $chocosrc,
