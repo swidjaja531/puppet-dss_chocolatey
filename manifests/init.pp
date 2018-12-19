@@ -31,12 +31,18 @@ class dss_chocolatey (
       require            => File['c:/programdata/chocolatey/license'],
     }
 
-    package { [
-      'chocolatey.extension',
-      'chocolatey-core.extension',
-    ]:
+    package { 'chocolatey.extension':
       ensure          => present,
       install_options => ['-pre'],
+      provider        => chocolatey,
+      require         => [
+        Chocolateysource['internal_chocolatey'],
+        File['c:/programdata/chocolatey/license/chocolatey.license.xml'],
+      ],
+    }
+
+    package { 'chocolatey-core.extension':
+      ensure          => present,
       provider        => chocolatey,
       require         => [
         Chocolateysource['internal_chocolatey'],
