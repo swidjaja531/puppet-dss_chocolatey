@@ -37,6 +37,7 @@ class dss_chocolatey (
     ]:
       ensure          => present,
       install_options => ['-pre'],
+      provider        => chocolatey,
       require         => [
         Chocolateysource['internal_chocolatey'],
         File['c:/programdata/chocolatey/license/chocolatey.license.xml'],
