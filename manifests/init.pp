@@ -24,7 +24,7 @@ class dss_chocolatey (
 
     file { 'c:/programdata/chocolatey/license/chocolatey.license.xml':
       ensure             => file,
-      source             => 'puppet:///modules/profiles/chocolatey.license.xml',
+      source             => 'puppet:///modules/dss_chocolatey/chocolatey.license.xml',
       source_permissions => ignore,
       require            => File['c:/programdata/chocolatey/license'],
     }
