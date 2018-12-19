@@ -41,15 +41,6 @@ class dss_chocolatey (
       ],
     }
 
-    package { 'chocolatey-core.extension':
-      ensure          => present,
-      provider        => chocolatey,
-      require         => [
-        Chocolateysource['internal_chocolatey'],
-        File['c:/programdata/chocolatey/license/chocolatey.license.xml'],
-      ],
-    }
-
     # remove/disable community and licensed choco repos respectively to ensure packages
     # can only be retrieved from the internally repository
     chocolateysource { 'chocolatey':
