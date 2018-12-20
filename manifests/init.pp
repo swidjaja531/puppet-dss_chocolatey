@@ -7,6 +7,12 @@
 class dss_chocolatey (
   $chocomgmt = undef,
 ) {
+  class { 'chocolatey':
+    chocolatey_download_url       => lookup('internal_choco_repo'),
+    use_7zip                      => false,
+    choco_install_timeout_seconds => 2700,
+  }
+
   # install and configure chocolatey if chocomgmt is true
   if $chocomgmt {
     $chocosrc = lookup('internal_choco_repo')
