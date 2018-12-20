@@ -8,7 +8,7 @@ class dss_chocolatey (
   $chocomgmt = undef,
 ) {
   class { 'chocolatey':
-    chocolatey_download_url       => lookup('internal_choco_repo'),
+    chocolatey_download_url       => 'http://puppetnexus.hra.nycnet:8081/nexus/content/repositories/hra-choco/chocolatey/0.10.11/chocolatey-0.10.11.nupkg',
     use_7zip                      => false,
     choco_install_timeout_seconds => 2700,
   }
