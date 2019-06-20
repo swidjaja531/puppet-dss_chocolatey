@@ -10,10 +10,9 @@ cache:
 before_script:
   - bundle -v
   - rm Gemfile.lock || true
-  - 'touch ~/.gemrc && printf ":ssl_verify_mode: 0\nsources:\n - http://rubygems.org\n" > ~/.gemrc'
-  - export http_proxy=http://172.17.0.1:3128
-  - export https_proxy=http://172.17.0.1:3128
-  - export GEM_SOURCE=http://rubygems.org
+  - gem sources --add http://l1vnexusp1.ux.hra.nycnet:8081/repository/rubygems.org-proxy/
+  - gem sources -r https://rubygems.org/
+  - export GEM_SOURCE=http://l1vnexusp1.ux.hra.nycnet:8081/repository/rubygems.org-proxy/
   - gem update --system 2.7.8
   - gem --version
   - bundle -v
