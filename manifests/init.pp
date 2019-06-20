@@ -21,7 +21,7 @@ class dss_chocolatey (
     chocolateysource { 'internal_chocolatey':
       ensure   => present,
       location => $chocosrc,
-      priority => 1,
+      priority => 20,
     }
 
     file { ['c:/programdata/chocolatey', 'c:/programdata/chocolatey/license']:
