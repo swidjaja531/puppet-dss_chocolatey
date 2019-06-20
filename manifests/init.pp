@@ -12,7 +12,7 @@ class dss_chocolatey (
     $chocosrc = lookup('internal_choco_repo')
 
     class { 'chocolatey':
-      chocolatey_download_url       => 'http://puppetnexus.hra.nycnet:8081/nexus/content/repositories/hra-choco/chocolatey/0.10.11/chocolatey-0.10.11.nupkg',
+      chocolatey_download_url       => 'http://l1vnexusp1.ux.hra.nycnet:8081/repository/hra-choco/chocolatey/0.10.11',
       use_7zip                      => false,
       choco_install_timeout_seconds => 2700,
     }
@@ -21,7 +21,7 @@ class dss_chocolatey (
     chocolateysource { 'internal_chocolatey':
       ensure   => present,
       location => $chocosrc,
-      priority => 1,
+      priority => 20,
     }
 
     file { ['c:/programdata/chocolatey', 'c:/programdata/chocolatey/license']:
