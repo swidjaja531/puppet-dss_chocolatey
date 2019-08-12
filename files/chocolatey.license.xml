@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<license id="e4ccb3ea-c51e-40ee-8c11-5fa1f93a4ecb" expiration="2019-08-15T00:00:00.0000000" type="Business">
+<license id="10f7acbe-507a-47ca-96d2-186225b65607" expiration="2020-08-15T00:00:00.0000000" type="Business">
   <name>NYC Dept of Social Services [900] (blakev@hra.nyc.gov)</name>
   <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
     <SignedInfo>
@@ -10,9 +10,9 @@
           <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
         </Transforms>
         <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <DigestValue>9mueHlzmk95w1i4Vgt37CDhgGrk=</DigestValue>
+        <DigestValue>A57YCBbb1qGlaJVbowEAiRpn/hI=</DigestValue>
       </Reference>
     </SignedInfo>
-    <SignatureValue>COZWugwVSvRRr7R8x33apaCWWGZ5Rh4KYuZ5FJRHRSY3DI9m7FTabrDAqWlbnYUb7Q+oNsxA5Mu0qJrH0MVHPyZbTrUukgbMbqEqyXdoGObZNZOCgMb9bQInjULgoJkhhLPX35dW9zS4qOPl96vqj+GKvVTG2UFreqVqvWHZiP8=</SignatureValue>
+    <SignatureValue>opvRUKHfrgnOFGMScs2g1DF2zEZipA/YHo0tzPjp/vG4DHi/FXXCb5vdZs3UCBj+vLFtuFcy9w7JSgCS+b7CCvsOKin6PUJmnqmTt5IGOxa4Y0XMdXuLyRTFDsWiHOOEY2eP7bu8k1inr7QMDntuQ+2IJKPjObHxGgXATj512jk=</SignatureValue>
   </Signature>
 </license>
