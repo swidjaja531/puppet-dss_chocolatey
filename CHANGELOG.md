@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2019-08-12 - [Release 1.0.2](https://puppet-repos.hra.nycnet/puppet/dss_chocolatey/tree/1.0.2)
+
+### **Patch**
+
+* updated contents of license file
+
 ## 2019-06-20 - [Release 1.0.1](https://puppet-repos.hra.nycnet/puppet/dss_chocolatey/tree/1.0.1)
 
 ### **Patch**
