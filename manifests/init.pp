@@ -24,6 +24,12 @@ class dss_chocolatey (
       priority => 20,
     }
 
+    chocolateysource { 'chocolatey_mirror':
+      ensure   => present,
+      location => 'http://l1vnexusp1.ux.hra.nycnet:8081/repository/choco-mirror/',
+      priority => 30,
+    }
+
     file { ['c:/programdata/chocolatey', 'c:/programdata/chocolatey/license']:
       ensure => directory,
     }
