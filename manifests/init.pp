@@ -69,5 +69,21 @@ class dss_chocolatey (
       priority => '10',
       require  => Package['chocolatey.extension'],
     }
+
+    chocolateyconfig {'proxy':
+      value => 'http://10.253.10.212:8002',
+    }
+
+    chocolateyconfig {'proxyUser':
+      value => 'hrapuppet',
+    }
+
+    chocolateyconfig {'proxyPassword':
+      value => lookup('hrapuppet_passwd'),
+    }
+
+    chocolateyconfig {'proxyBypassOnLocal':
+      value => 'true',
+    }
   }
 }
