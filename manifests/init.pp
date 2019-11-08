@@ -79,7 +79,7 @@ class dss_chocolatey (
     }
 
     chocolateyconfig {'proxyPassword':
-      value => lookup('hrapuppet_passwd'),
+      value => Sensitive(lookup('hrapuppet_passwd')),
     }
 
     chocolateyconfig {'proxyBypassOnLocal':
